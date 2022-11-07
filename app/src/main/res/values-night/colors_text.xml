@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="homeDividerColor">@color/darkGray</color>
+    <color name="homeMessageColor">@color/darkGray</color>
+
+    <color name="rowTitleColor">@color/white</color>
+    <color name="rowSubtitleColor">@color/gray</color>
+    <color name="rowDateColor">@color/gray</color>
+
+    <color name="dialogTitleColor">@color/white</color>
+    <color name="dialogSubtitleColor">@color/white</color>
+    <color name="dialogPriceColor">@color/white</color>
+    <color name="dialogCopyrightColor">@color/gray</color>
+</resources>

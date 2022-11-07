@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="homeMessageHorizontalMargin">30dp</dimen>
+
+    <dimen name="rowImageMargin">5dp</dimen>
+    <dimen name="rowTextMargin">10dp</dimen>
+
+    <dimen name="dialogPadding">30dp</dimen>
+    <dimen name="dialogImageMargin">25dp</dimen>
+    <dimen name="dialogTitleMarginTop">10dp</dimen>
+    <dimen name="dialogSubtitleMarginTop">10dp</dimen>
+    <dimen name="dialogPriceMarginTop">10dp</dimen>
+    <dimen name="dialogCopyrightMarginTop">10dp</dimen>
+    <dimen name="dialogButtonMarginTop">30dp</dimen>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="album"
+            type="com.edu.labs.albumstest.domain.model.Album" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{onClick}">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/album_image"
+            url="@{album.artworkURL}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/rowImageMargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/album_name"
+            style="@style/RowTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/rowTextMargin"
+            android:text="@{album.collectionName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/album_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Album Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/artist_name"
+            style="@style/RowSubtitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{album.artistName}"
+            app:layout_constraintBottom_toTopOf="@id/releaseDate"
+            app:layout_constraintEnd_toEndOf="@id/album_name"
+            app:layout_constraintStart_toStartOf="@id/album_name"
+            app:layout_constraintTop_toBottomOf="@id/album_name"
+            tools:text="Artist Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/releaseDate"
+            style="@style/RowDateStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{album.releaseDate}"
+            app:layout_constraintBottom_toBottomOf="@id/album_image"
+            app:layout_constraintEnd_toEndOf="@id/album_name"
+            app:layout_constraintStart_toStartOf="@id/album_name"
+            app:layout_constraintTop_toBottomOf="@id/artist_name"
+            tools:text="2000/01/01" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

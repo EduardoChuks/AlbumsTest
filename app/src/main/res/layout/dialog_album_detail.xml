@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="album"
+            type="com.edu.labs.albumstest.domain.model.Album" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dialogPadding">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/album_image"
+            url="@{album.artworkURL}"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/album_name"
+            style="@style/DialogTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialogTitleMarginTop"
+            android:text="@{album.collectionName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/album_image"
+            tools:text="Album Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/album_genre"
+            style="@style/DialogSubtitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialogSubtitleMarginTop"
+            android:text="@{album.genreName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/album_name"
+            tools:text="Album Genre" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/album_price"
+            style="@style/DialogPriceStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialogPriceMarginTop"
+            android:text="@{album.price}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/album_genre"
+            tools:text="0.0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/album_copyright"
+            style="@style/DialogCopyRightStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialogCopyrightMarginTop"
+            android:text="@{album.copyright}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/album_price"
+            tools:text="Copyright" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialogButtonMarginTop"
+            android:onClick="@{onClick}"
+            android:text="@string/home_dialog_ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/album_copyright" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

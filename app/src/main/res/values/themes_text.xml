@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  General Text Styles  -->
+    <style name="TextSpacing12Style" parent="TextAppearance.AppCompat">
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <!--  Styles for activity_home.xml  -->
+    <style name="HomeMessageStyle" parent="TextSpacing12Style">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/homeMessageColor</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--  Styles for row_album.xml  -->
+    <style name="RowTextStyle" parent="TextSpacing12Style">
+        <item name="android:maxLines">2</item>
+        <item name="android:minLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="RowTitleStyle" parent="RowTextStyle">
+        <item name="android:textColor">@color/rowTitleColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="RowSubtitleStyle" parent="RowTextStyle">
+        <item name="android:textColor">@color/rowSubtitleColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic|bold</item>
+    </style>
+
+    <style name="RowDateStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/rowDateColor</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--  Styles for dialog_album_detail.xml  -->
+    <style name="DialogTextStyle" parent="TextSpacing12Style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="DialogTitleStyle" parent="DialogTextStyle">
+        <item name="android:textColor">@color/dialogTitleColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DialogSubtitleStyle" parent="DialogTextStyle">
+        <item name="android:textColor">@color/dialogSubtitleColor</item>
+    </style>
+
+    <style name="DialogPriceStyle" parent="DialogTextStyle">
+        <item name="android:textColor">@color/dialogPriceColor</item>
+    </style>
+
+    <style name="DialogCopyRightStyle" parent="DialogTextStyle">
+        <item name="android:textColor">@color/dialogCopyrightColor</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>
